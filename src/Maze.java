@@ -147,6 +147,14 @@ public class Maze {
      */
     public boolean isValidCell(int row, int col) {
         // TODO: Complete this function
+        // If it is on an edge or corner
+        if (row < 0 || col < 0) {
+            return false;
+        }
+        // If it has already been explored or if it is a wall
+        else if (mazeGrid[row][col].isExplored() || mazeGrid[row][col].isWall()) {
+            return false;
+        }
         return true;
     }
 }
