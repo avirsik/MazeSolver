@@ -28,8 +28,15 @@ public class MazeSolver {
      */
     public ArrayList<MazeCell> getSolution() {
         // TODO: Get the solution from the maze
-        // Should be from start to end cells
-        return null;
+        ArrayList<MazeCell> cells = new ArrayList<MazeCell>();
+        // Create new cell to keep track of current cell
+        MazeCell current = maze.getEndCell();
+        // While current cell is not equal to start cell, set current cell equal to parent and add to ArrayList
+        while (current != maze.getStartCell()) {
+            current = current.getParent();
+            cells.add(current);
+        }
+        return cells;
     }
 
     /**
