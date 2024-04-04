@@ -78,10 +78,10 @@ public class MazeSolver {
      * If there is a valid cell North, East, South, or West,
      * Update parents, add to stack, and set explored
      *
-     * @param row
-     * @param col
-     * @param cellsVisited
-     * @param current
+     * @param row row of the cell
+     * @param col col of the cell
+     * @param cellsVisited keeps track of the cells visited
+     * @param current current MazeCell
      */
     public void moveCell(int row, int col, Stack<MazeCell> cellsVisited, MazeCell current) {
         if (maze.isValidCell(row, col)) {
@@ -124,9 +124,9 @@ public class MazeSolver {
      * Update parents, add to Queue, and set explored
      *
      * @param row row of the cell
-     * @param col
-     * @param cellsVisited
-     * @param current
+     * @param col col of the cell
+     * @param cellsVisited keeps track of the cells visited
+     * @param current current MazeCell
      */
     public void moveCell(int row, int col, Queue<MazeCell> cellsVisited, MazeCell current) {
         if (maze.isValidCell(row, col)) {
