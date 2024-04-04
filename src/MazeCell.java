@@ -1,7 +1,9 @@
 /**
  * A class that represents a single cell of the maze.
- * @author Ms. Namasivayam
+ * @author Ms. Namasivayam and Annie Virsik
  * @version 03/10/2023
+ *
+ * 4/3/24
  */
 
 public class MazeCell {

@@ -1,7 +1,9 @@
 /**
  * Creates a Maze made up of MazeCells
- * @author Ms. Namasivayam
+ * @author Ms. Namasivayam and Annie Virsik
  * @version 03/04/2022
+ *
+ * 4/3/24
  */
 
 import java.io.File;
@@ -148,7 +150,7 @@ public class Maze {
     public boolean isValidCell(int row, int col) {
         // TODO: Complete this function
         // If it is on an edge or corner
-        if (row < 0 || col < 0) {
+        if (row < 0 || col < 0 || row > mazeGrid.length-1 || col > mazeGrid.length) {
             return false;
         }
         // If it has already been explored or if it is a wall
